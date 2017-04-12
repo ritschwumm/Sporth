@@ -517,7 +517,22 @@ void sporth_run(plumber_data *pd, int argc, char *argv[],
                 }
                 break;
             case 'h':
-                plumber_print(pd, "Usage: sporth input.sp\n");
+                plumber_print(pd, "Usage: sporth [options] input.sp\n");
+                plumber_print(pd, "    -d <duration> sets the duration\n");
+                plumber_print(pd, "    -o <file>     sets the output file, \"raw\" has a special meaning.\n");
+                plumber_print(pd, "    -P            show the program.\n");
+                plumber_print(pd, "    -r <rate>     sets the sample rate (in Hz).\n");
+                plumber_print(pd, "    -c <channels> sets the number of channels.\n");
+                plumber_print(pd, "    -b <driver>   sets the driver, can be \"raw\", \"plot\", \"spa\" or \"jack\".\n");
+                /*
+                plumber_print(pd, "    -n            sets the null driver.\n");
+                plumber_print(pd, "    -0            sets the null file.\n");
+                */
+                plumber_print(pd, "    -p <port>     sets the jack port number.\n");
+                /*
+                plumber_print(pd, "    -S            ???.\n");
+                plumber_print(pd, "    -s <value>    seeds an argument.\n");
+                */
                 exit(1);
                 break;
             case 'n':
